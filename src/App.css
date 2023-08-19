@@ -1,38 +1,118 @@
-.App {
+body {
+  background-color: hsl(0, 0%, 8%);
+  color: #ffffff;
+  overscroll-behavior: none;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+}
+
+.moviePage {
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 50px;
+}
+
+.movie-app > .row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.image-container {
+  position: relative;
+  transition: transform 0.2s;
+  max-height: 480px;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+.buttonOverlay:hover {
+  background-color: #3bc24f;
+  opacity: 0.5;
+  color: black;
+  box-shadow: 0px 2px 10px 5px #1abc9c;
+}
+
+.buttonOverlay2:hover {
+  background-color: #ed0e64;
+  color: black;
+  box-shadow: 0px 2px 10px 5px #bc4c93;
+}
+
+.buttonOverlay:active {
+  transform: scale(0.95);
+}
+
+.buttonOverlay2:active {
+  transform: scale(0.95);
+}
+
+.buttonOverlay:hover svg {
+  fill: black;
+}
+
+.buttonOverlay2:hover svg {
+  fill: black;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 50px;
+  font-size: 20px;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.buttonOnClick:active {
+  box-shadow: 2px, 2px, 5px, rgba(0, 0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 750px) {
+  .moviePage {
+    padding-right: 150px;
+    padding-left: 150px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 600px) {
+  .moviePage {
+    padding-right: 50px;
+    padding-left: 50px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 450px) {
+  .moviePage {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  img {
+    display: none;
+  }
+
+  .moviePage {
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }

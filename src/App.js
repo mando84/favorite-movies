@@ -7,6 +7,7 @@ import { Context } from "./context/Context";
 function App() {
   const [searchValue, setSearchValue] = useState("");
   const [favorites, setFavorites] = useState([]);
+  const [movies, setMovies] = useState([]);
   return (
     <>
       <Context.Provider
@@ -15,6 +16,8 @@ function App() {
           setSearchValue,
           favorites,
           setFavorites,
+          movies,
+          setMovies,
         }}
       >
         <Router>

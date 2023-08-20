@@ -10,9 +10,14 @@ import { useContext } from "react";
 import { Context } from "../context/Context";
 
 function MovieSearch() {
-  const { favorites, setFavorites, searchValue, setSearchValue } =
-    useContext(Context);
-  const [movies, setMovies] = useState([]);
+  const {
+    favorites,
+    setFavorites,
+    searchValue,
+    setSearchValue,
+    movies,
+    setMovies,
+  } = useContext(Context);
 
   const getMovieRequest = async (searchValue) => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&type=movie&apikey=6cc70043`;
@@ -39,8 +44,9 @@ function MovieSearch() {
     const movieFavorites = JSON.parse(localStorage.getItem("favorite movies"));
     if (movieFavorites === null) {
       setFavorites([]);
+    } else {
+      setFavorites(movieFavorites);
     }
-    setFavorites(movieFavorites);
   }, []);
 
   const searchObjectArr = (objLocal, obj) => {
@@ -74,8 +80,7 @@ function MovieSearch() {
   const saveToLocalStorage = (items) => {
     localStorage.setItem("favorite movies", JSON.stringify(items));
   };
-
-  if (favorites !== null && favorites.length === 0) {
+  if (favorites.length === 0) {
     return (
       <div className="container-fluid movie-app">
         <div className="row d-flex align-items-center mt-4 mb-4">

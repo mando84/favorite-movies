@@ -1,0 +1,17 @@
+[33mcommit b6e1a495016931e947fe14d8d7857b6a2bf067ac[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Armando Salinas <armandosalinas84@gmail.com>
+Date:   Sun Aug 20 18:51:14 2023 -0500
+
+    fixed an issue with useEffect that wrecked the app
+
+[33mcommit 926983b9abab79d452a5659f0835078e6e12f034[m
+Author: Armando Salinas <armandosalinas84@gmail.com>
+Date:   Sat Aug 19 18:35:25 2023 -0500
+
+    tryig to make it work
+
+[33mcommit 39e720ecc78e7a70189bb78bda5e91593f34b0cb[m
+Author: Armando Salinas <armandosalinas84@gmail.com>
+Date:   Fri Aug 11 21:28:12 2023 -0500
+
+    Initialize project using Create React App

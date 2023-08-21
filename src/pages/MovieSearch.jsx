@@ -60,7 +60,11 @@ function MovieSearch() {
   };
 
   const addFavoriteMovie = (movie) => {
-    const constFavs = JSON.parse(localStorage.getItem("favorite movies"));
+    let constFavs = JSON.parse(localStorage.getItem("favorite movies"));
+
+    if (constFavs === null) {
+      constFavs = [];
+    }
 
     if (searchObjectArr(constFavs, movie) === false) {
       const newFavoriteList = [...favorites, movie];

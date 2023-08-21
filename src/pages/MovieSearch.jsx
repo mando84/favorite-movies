@@ -20,7 +20,7 @@ function MovieSearch() {
   } = useContext(Context);
 
   const getMovieRequest = async (searchValue) => {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&type=movie&apikey=6cc70043`;
+    const url = `https://www.omdbapi.com/?s=${searchValue}&type=movie&apikey=6cc70043`;
 
     const response = await fetch(url);
     const responseJSON = await response.json();

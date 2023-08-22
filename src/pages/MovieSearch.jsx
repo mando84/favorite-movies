@@ -52,7 +52,7 @@ function MovieSearch() {
   const searchObjectArr = (objLocal, obj) => {
     let result = false;
     objLocal.map((item) => {
-      if (item.Title === obj.Title) {
+      if (item.imdbID === obj.imdbID) {
         result = true;
       }
     });
